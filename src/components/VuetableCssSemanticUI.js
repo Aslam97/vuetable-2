@@ -27,10 +27,10 @@ export default {
       prev: 'left chevron icon',
       next: 'right chevron icon',
       last: 'angle double right icon',
-    }
+    },
   },
 
   paginationInfo: {
     infoClass: 'left floated left aligned six wide column',
-  }
-}
+  },
+};
