@@ -18,7 +18,7 @@
     </div>
 
     <div
-      class="vuetable-body-wrapper"
+      class="gv-table-body-wrapper"
       :class="{ 'fixed-header': isFixedHeader }"
       :style="{ height: tableHeight }"
     >
@@ -45,7 +45,7 @@
         <tfoot>
           <slot name="tableFooter" :fields="tableFields"></slot>
         </tfoot>
-        <tbody v-cloak class="vuetable-body">
+        <tbody v-cloak class="gv-table-body">
           <template v-for="(item, itemIndex) in tableData">
             <tr
               :item-index="itemIndex"
@@ -72,7 +72,7 @@
                   </template>
                   <template v-else-if="isFieldSlot(field.name)">
                     <td
-                      :class="bodyClass('vuetable-slot', field)"
+                      :class="bodyClass('gv-table-slot', field)"
                       :key="fieldIndex"
                       :style="{ width: field.width }"
                     >
@@ -439,7 +439,7 @@ export default {
     if (this.isFixedHeader) {
       this.scrollBarWidth = this.getScrollBarWidth() + 'px';
 
-      let elem = this.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+      let elem = this.$el.getElementsByClassName('gv-table-body-wrapper')[0];
       if (elem != null) {
         elem.addEventListener('scroll', this.handleScroll);
       }
@@ -447,7 +447,7 @@ export default {
   },
 
   destroyed() {
-    let elem = this.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+    let elem = this.$el.getElementsByClassName('gv-table-body-wrapper')[0];
     if (elem != null) {
       elem.removeEventListener('scroll', this.handleScroll);
     }
@@ -745,7 +745,7 @@ export default {
 
     checkScrollbarVisibility() {
       this.$nextTick(() => {
-        let elem = this.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+        let elem = this.$el.getElementsByClassName('gv-table-body-wrapper')[0];
         if (elem != null) {
           this.scrollVisible = elem.scrollHeight > elem.clientHeight;
           this.fireEvent('scrollbar-visible', this.scrollVisible);
@@ -1275,11 +1275,11 @@ table.vuetable.fixed-header {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.vuetable-body-wrapper.fixed-header {
+.gv-table-body-wrapper.fixed-header {
   position: relative;
   overflow-y: auto;
 }
-.vuetable-body-wrapper table.vuetable.fixed-header {
+.gv-table-body-wrapper table.vuetable.fixed-header {
   border-top: none !important;
   margin-top: 0 !important;
   border-top-left-radius: 0px;

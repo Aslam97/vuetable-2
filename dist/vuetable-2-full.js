@@ -4267,14 +4267,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     if (this.isFixedHeader) {
       this.scrollBarWidth = this.getScrollBarWidth() + 'px';
 
-      var elem = this.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+      var elem = this.$el.getElementsByClassName('gv-table-body-wrapper')[0];
       if (elem != null) {
         elem.addEventListener('scroll', this.handleScroll);
       }
     }
   },
   destroyed: function destroyed() {
-    var elem = this.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+    var elem = this.$el.getElementsByClassName('gv-table-body-wrapper')[0];
     if (elem != null) {
       elem.removeEventListener('scroll', this.handleScroll);
     }
@@ -4520,7 +4520,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this5 = this;
 
       this.$nextTick(function () {
-        var elem = _this5.$el.getElementsByClassName('vuetable-body-wrapper')[0];
+        var elem = _this5.$el.getElementsByClassName('gv-table-body-wrapper')[0];
         if (elem != null) {
           _this5.scrollVisible = elem.scrollHeight > elem.clientHeight;
           _this5.fireEvent('scrollbar-visible', _this5.scrollVisible);
@@ -6513,7 +6513,7 @@ exports = module.exports = __webpack_require__(20)(false);
 
 
 // module
-exports.push([module.i, "\n[v-cloak] {\n  display: none;\n}\ntable.vuetable.fixed-header {\n  table-layout: fixed;\n}\n.vuetable th.sortable:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-head-wrapper {\n  overflow-x: hidden;\n}\n.vuetable-head-wrapper table.vuetable {\n  border-bottom-left-radius: 0px;\n  border-bottom-right-radius: 0px;\n}\n.vuetable-body-wrapper.fixed-header {\n  position: relative;\n  overflow-y: auto;\n}\n.vuetable-body-wrapper table.vuetable.fixed-header {\n  border-top: none !important;\n  margin-top: 0 !important;\n  border-top-left-radius: 0px;\n  border-top-right-radius: 0px;\n}\n.vuetable-empty-result {\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n[v-cloak] {\n  display: none;\n}\ntable.vuetable.fixed-header {\n  table-layout: fixed;\n}\n.vuetable th.sortable:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-head-wrapper {\n  overflow-x: hidden;\n}\n.vuetable-head-wrapper table.vuetable {\n  border-bottom-left-radius: 0px;\n  border-bottom-right-radius: 0px;\n}\n.gv-table-body-wrapper.fixed-header {\n  position: relative;\n  overflow-y: auto;\n}\n.gv-table-body-wrapper table.vuetable.fixed-header {\n  border-top: none !important;\n  margin-top: 0 !important;\n  border-top-left-radius: 0px;\n  border-top-right-radius: 0px;\n}\n.vuetable-empty-result {\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -6984,7 +6984,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })], {
     fields: _vm.tableFields
   })], 2)], 1)]) : _vm._e(), _vm._v(" "), _c('div', {
-    staticClass: "vuetable-body-wrapper",
+    staticClass: "gv-table-body-wrapper",
     class: {
       'fixed-header': _vm.isFixedHeader
     },
@@ -7010,7 +7010,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })], 2) : _vm._e(), _vm._v(" "), _c('tfoot', [_vm._t("tableFooter", null, {
     fields: _vm.tableFields
   })], 2), _vm._v(" "), _c('tbody', {
-    staticClass: "vuetable-body"
+    staticClass: "gv-table-body"
   }, [_vm._l((_vm.tableData), function(item, itemIndex) {
     return [_c('tr', {
       key: itemIndex,
@@ -7048,7 +7048,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }
       })] : (_vm.isFieldSlot(field.name)) ? [_c('td', {
         key: fieldIndex,
-        class: _vm.bodyClass('vuetable-slot', field),
+        class: _vm.bodyClass('gv-table-slot', field),
         style: ({
           width: field.width
         })
