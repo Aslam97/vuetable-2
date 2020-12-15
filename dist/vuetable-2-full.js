@@ -4982,7 +4982,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var fieldName = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof___default()(field.name) === 'object' && field.name !== null ? field.name.name : field.name;
       fieldName = fieldName.replace(this.fieldPrefix, '');
 
-      return ['vuetable-col-' + fieldName, field.titleClass];
+      return ['gv-table-col-' + fieldName, field.titleClass];
     }
   }
 });
@@ -7308,7 +7308,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return [(field.visible) ? [(_vm.vuetable.isFieldComponent(field.name)) ? [_c(field.name, {
       key: fieldIndex,
       tag: "component",
-      class: _vm.headerClass('vuetable-th-component', field),
+      class: _vm.headerClass('gv-table-th-component', field),
       style: ({
         width: field.width
       }),
@@ -7326,7 +7326,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })] : (_vm.vuetable.isFieldSlot(field.name)) ? [_c('th', {
       key: fieldIndex,
-      class: _vm.headerClass('vuetable-th-slot', field),
+      class: _vm.headerClass('gv-table-th-slot', field),
       style: ({
         width: field.width
       }),
@@ -7340,7 +7340,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })] : [_c('th', {
       key: fieldIndex,
-      class: _vm.headerClass('vuetable-th', field),
+      class: _vm.headerClass('gv-table-th', field),
       style: ({
         width: field.width
       }),

@@ -10,7 +10,7 @@
             :title="renderTitle(field)"
             :vuetable="vuetable"
             :key="fieldIndex"
-            :class="headerClass('vuetable-th-component', field)"
+            :class="headerClass('gv-table-th-component', field)"
             :style="{ width: field.width }"
             @vuetable:header-event="vuetable.onHeaderEvent"
             @click="onColumnHeaderClicked(field, $event)"
@@ -18,7 +18,7 @@
         </template>
         <template v-else-if="vuetable.isFieldSlot(field.name)">
           <th
-            :class="headerClass('vuetable-th-slot', field)"
+            :class="headerClass('gv-table-th-slot', field)"
             :key="fieldIndex"
             :style="{ width: field.width }"
             v-html="renderTitle(field)"
@@ -30,7 +30,7 @@
             @click="onColumnHeaderClicked(field, $event)"
             :key="fieldIndex"
             :id="'_' + field.name"
-            :class="headerClass('vuetable-th', field)"
+            :class="headerClass('gv-table-th', field)"
             :style="{ width: field.width }"
             v-html="renderTitle(field)"
           ></th>

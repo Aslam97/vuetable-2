@@ -42,7 +42,7 @@ export default {
           : field.name;
       fieldName = fieldName.replace(this.fieldPrefix, '');
 
-      return ['vuetable-col-' + fieldName, field.titleClass];
+      return ['gv-table-col-' + fieldName, field.titleClass];
     },
   },
 };
