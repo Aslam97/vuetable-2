@@ -1,7 +1,7 @@
 <template>
   <div :class="$_css.tableWrapper">
-    <div class="vuetable-head-wrapper" v-if="isFixedHeader">
-      <table :class="['vuetable', $_css.tableClass, $_css.tableHeaderClass]">
+    <div class="gv-table-head-wrapper" v-if="isFixedHeader">
+      <table :class="['gv-table', $_css.tableClass, $_css.tableHeaderClass]">
         <vuetable-col-group :is-header="true" />
         <thead>
           <slot name="tableHeader" :fields="tableFields">
@@ -24,7 +24,7 @@
     >
       <table
         :class="[
-          'vuetable',
+          'gv-table',
           isFixedHeader ? 'fixed-header' : '',
           $_css.tableClass,
           $_css.tableBodyClass,
@@ -65,7 +65,7 @@
                       :row-index="itemIndex"
                       :row-field="field"
                       :vuetable="vuetable"
-                      :class="bodyClass('vuetable-component', field)"
+                      :class="bodyClass('gv-table-component', field)"
                       :style="{ width: field.width }"
                       @vuetable:field-event="onFieldEvent"
                     ></component>
@@ -86,7 +86,7 @@
                   </template>
                   <template v-else>
                     <td
-                      :class="bodyClass('vuetable-td-' + field.name, field)"
+                      :class="bodyClass('gv-table-td-' + field.name, field)"
                       :key="fieldIndex"
                       :style="{ width: field.width }"
                       v-html="renderNormalField(field, item)"
@@ -125,7 +125,7 @@
             <tr>
               <td
                 :colspan="countVisibleFields"
-                class="vuetable-empty-result"
+                class="gv-table-empty-result"
                 v-html="noDataTemplate"
               ></td>
             </tr>
@@ -282,7 +282,7 @@ export default {
     },
     detailRowClass: {
       type: [String, Function],
-      default: 'vuetable-detail-row',
+      default: 'gv-table-detail-row',
     },
     detailRowOptions: {
       type: Object,
@@ -510,7 +510,7 @@ export default {
       //don't modify header scroll if we are scrolling vertically
       if (horizontal != this.lastScrollPosition) {
         let header = this.$el.getElementsByClassName(
-          'vuetable-head-wrapper'
+          'gv-table-head-wrapper'
         )[0];
         if (header != null) {
           header.scrollLeft = horizontal;
@@ -1261,17 +1261,17 @@ export default {
 [v-cloak] {
   display: none;
 }
-table.vuetable.fixed-header {
+table.gv-table.fixed-header {
   table-layout: fixed;
 }
-.vuetable th.sortable:hover {
+.gv-table th.sortable:hover {
   color: #2185d0;
   cursor: pointer;
 }
-.vuetable-head-wrapper {
+.gv-table-head-wrapper {
   overflow-x: hidden;
 }
-.vuetable-head-wrapper table.vuetable {
+.gv-table-head-wrapper table.gv-table {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -1279,13 +1279,13 @@ table.vuetable.fixed-header {
   position: relative;
   overflow-y: auto;
 }
-.gv-table-body-wrapper table.vuetable.fixed-header {
+.gv-table-body-wrapper table.gv-table.fixed-header {
   border-top: none !important;
   margin-top: 0 !important;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
-.vuetable-empty-result {
+.gv-table-empty-result {
   text-align: center;
 }
 </style>

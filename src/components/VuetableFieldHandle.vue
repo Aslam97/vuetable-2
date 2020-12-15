@@ -1,8 +1,8 @@
 <template>
-  <th v-if="isHeader" class="vuetable-th-component-handle" v-html="title"></th>
+  <th v-if="isHeader" class="gv-table-th-component-handle" v-html="title"></th>
   <td
     v-else
-    class="vuetable-td-component-handle"
+    class="gv-table-td-component-handle"
     v-html="renderIconTag(['handle-icon', css.handleIcon])"
   ></td>
 </template>

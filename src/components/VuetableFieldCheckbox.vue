@@ -1,12 +1,12 @@
 <template>
-  <th v-if="isHeader" class="vuetable-th-component-checkbox">
+  <th v-if="isHeader" class="gv-table-th-component-checkbox">
     <input
       type="checkbox"
       @change="toggleAllCheckbox($event)"
       :checked="isAllItemsInCurrentPageSelected()"
     />
   </th>
-  <td v-else class="vuetable-td-component-checkbox">
+  <td v-else class="gv-table-td-component-checkbox">
     <input
       type="checkbox"
       @change="toggleCheckbox(rowData, $event)"

@@ -1,12 +1,12 @@
 <template>
   <th
     v-if="isHeader"
-    class="vuetable-th-component-sequence"
+    class="gv-table-th-component-sequence"
     v-html="title"
   ></th>
   <td
     v-else
-    class="vuetable-td-component-sequence"
+    class="gv-table-td-component-sequence"
     v-html="renderSequence()"
   ></td>
 </template>

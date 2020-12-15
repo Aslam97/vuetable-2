@@ -12,7 +12,7 @@
     <col
       v-if="isHeader && vuetable.scrollVisible"
       :style="{ width: vuetable.scrollBarWidth }"
-      class="vuetable-col-gutter"
+      class="gv-table-col-gutter"
     />
   </colgroup>
 </template>

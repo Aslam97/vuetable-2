@@ -1,7 +1,7 @@
 <template>
   <th
     :style="{ width: vuetable.scrollBarWidth }"
-    class="vuetable-th-gutter"
+    class="gv-table-th-gutter"
   ></th>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-.vuetable-th-gutter {
+.gv-table-th-gutter {
   padding: 0 !important;
   border-left: none !important;
   border-right: none !important;

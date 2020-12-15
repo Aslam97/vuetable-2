@@ -4108,7 +4108,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     detailRowClass: {
       type: [String, Function],
-      default: 'vuetable-detail-row'
+      default: 'gv-table-detail-row'
     },
     detailRowOptions: {
       type: Object,
@@ -4329,7 +4329,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var horizontal = e.currentTarget.scrollLeft;
 
       if (horizontal != this.lastScrollPosition) {
-        var header = this.$el.getElementsByClassName('vuetable-head-wrapper')[0];
+        var header = this.$el.getElementsByClassName('gv-table-head-wrapper')[0];
         if (header != null) {
           header.scrollLeft = horizontal;
         }
@@ -6513,7 +6513,7 @@ exports = module.exports = __webpack_require__(20)(false);
 
 
 // module
-exports.push([module.i, "\n[v-cloak] {\n  display: none;\n}\ntable.vuetable.fixed-header {\n  table-layout: fixed;\n}\n.vuetable th.sortable:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-head-wrapper {\n  overflow-x: hidden;\n}\n.vuetable-head-wrapper table.vuetable {\n  border-bottom-left-radius: 0px;\n  border-bottom-right-radius: 0px;\n}\n.gv-table-body-wrapper.fixed-header {\n  position: relative;\n  overflow-y: auto;\n}\n.gv-table-body-wrapper table.vuetable.fixed-header {\n  border-top: none !important;\n  margin-top: 0 !important;\n  border-top-left-radius: 0px;\n  border-top-right-radius: 0px;\n}\n.vuetable-empty-result {\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n[v-cloak] {\n  display: none;\n}\ntable.gv-table.fixed-header {\n  table-layout: fixed;\n}\n.gv-table th.sortable:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.gv-table-head-wrapper {\n  overflow-x: hidden;\n}\n.gv-table-head-wrapper table.gv-table {\n  border-bottom-left-radius: 0px;\n  border-bottom-right-radius: 0px;\n}\n.gv-table-body-wrapper.fixed-header {\n  position: relative;\n  overflow-y: auto;\n}\n.gv-table-body-wrapper table.gv-table.fixed-header {\n  border-top: none !important;\n  margin-top: 0 !important;\n  border-top-left-radius: 0px;\n  border-top-right-radius: 0px;\n}\n.gv-table-empty-result {\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -6541,7 +6541,7 @@ exports = module.exports = __webpack_require__(20)(false);
 
 
 // module
-exports.push([module.i, "\n.vuetable-th-gutter {\n  padding: 0 !important;\n  border-left: none !important;\n  border-right: none !important;\n}\n", ""]);
+exports.push([module.i, "\n.gv-table-th-gutter {\n  padding: 0 !important;\n  border-left: none !important;\n  border-right: none !important;\n}\n", ""]);
 
 // exports
 
@@ -6858,12 +6858,12 @@ module.exports = Component.exports
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.isHeader) ? _c('th', {
-    staticClass: "vuetable-th-component-sequence",
+    staticClass: "gv-table-th-component-sequence",
     domProps: {
       "innerHTML": _vm._s(_vm.title)
     }
   }) : _c('td', {
-    staticClass: "vuetable-td-component-sequence",
+    staticClass: "gv-table-td-component-sequence",
     domProps: {
       "innerHTML": _vm._s(_vm.renderSequence())
     }
@@ -6891,7 +6891,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       })
     })] : _vm._e()]
   }), _vm._v(" "), (_vm.isHeader && _vm.vuetable.scrollVisible) ? _c('col', {
-    staticClass: "vuetable-col-gutter",
+    staticClass: "gv-table-col-gutter",
     style: ({
       width: _vm.vuetable.scrollBarWidth
     })
@@ -6966,9 +6966,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     class: _vm.$_css.tableWrapper
   }, [(_vm.isFixedHeader) ? _c('div', {
-    staticClass: "vuetable-head-wrapper"
+    staticClass: "gv-table-head-wrapper"
   }, [_c('table', {
-    class: ['vuetable', _vm.$_css.tableClass, _vm.$_css.tableHeaderClass]
+    class: ['gv-table', _vm.$_css.tableClass, _vm.$_css.tableHeaderClass]
   }, [_c('vuetable-col-group', {
     attrs: {
       "is-header": true
@@ -6993,7 +6993,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })
   }, [_c('table', {
     class: [
-      'vuetable',
+      'gv-table',
       _vm.isFixedHeader ? 'fixed-header' : '',
       _vm.$_css.tableClass,
       _vm.$_css.tableBodyClass ]
@@ -7033,7 +7033,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       return [(field.visible) ? [(_vm.isFieldComponent(field.name)) ? [_c(field.name, {
         key: fieldIndex,
         tag: "component",
-        class: _vm.bodyClass('vuetable-component', field),
+        class: _vm.bodyClass('gv-table-component', field),
         style: ({
           width: field.width
         }),
@@ -7058,7 +7058,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         rowField: field
       })], 2)] : [_c('td', {
         key: fieldIndex,
-        class: _vm.bodyClass('vuetable-td-' + field.name, field),
+        class: _vm.bodyClass('gv-table-td-' + field.name, field),
         style: ({
           width: field.width
         }),
@@ -7102,7 +7102,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     })], 1)]) : _vm._e()])] : _vm._e()]
   }), _vm._v(" "), (_vm.displayEmptyDataRow) ? [_c('tr', [_c('td', {
-    staticClass: "vuetable-empty-result",
+    staticClass: "gv-table-empty-result",
     attrs: {
       "colspan": _vm.countVisibleFields
     },
@@ -7237,7 +7237,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.isHeader) ? _c('th', {
-    staticClass: "vuetable-th-component-checkbox"
+    staticClass: "gv-table-th-component-checkbox"
   }, [_c('input', {
     attrs: {
       "type": "checkbox"
@@ -7251,7 +7251,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   })]) : _c('td', {
-    staticClass: "vuetable-td-component-checkbox"
+    staticClass: "gv-table-td-component-checkbox"
   }, [_c('input', {
     attrs: {
       "type": "checkbox"
@@ -7280,12 +7280,12 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.isHeader) ? _c('th', {
-    staticClass: "vuetable-th-component-handle",
+    staticClass: "gv-table-th-component-handle",
     domProps: {
       "innerHTML": _vm._s(_vm.title)
     }
   }) : _c('td', {
-    staticClass: "vuetable-td-component-handle",
+    staticClass: "gv-table-td-component-handle",
     domProps: {
       "innerHTML": _vm._s(_vm.renderIconTag(['handle-icon', _vm.css.handleIcon]))
     }
@@ -7372,7 +7372,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('th', {
-    staticClass: "vuetable-th-gutter",
+    staticClass: "gv-table-th-gutter",
     style: ({
       width: _vm.vuetable.scrollBarWidth
     })
